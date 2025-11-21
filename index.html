@@ -3,29 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - 3D Animation Portfolio</title>
+    <title>Sydney Gardner - 3D Animation Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <nav>
             <div class="logo">
-                <a href="index.html">Your Name</a>
+                <a href="index.html">Sydney Gardner</a>
             </div>
-            <ul class="nav-links">
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="reels.html">Reels</a></li>
-                <li><a href="films.html">Films</a></li>
                 <li><a href="3d-work.html">3D Work</a></li>
+                <li><a href="tools.html">Tools</a></li>
+                <li><a href="films.html">Films</a></li>
                 <li><a href="about.html">About</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="hero">
-            <h1 class="hero-name">Your Name</h1>
-            <p class="hero-subtitle">3D Animation & Visual Effects</p>
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-name">Sydney Gardner</h1>
+            </div>
+            <p class="hero-blurb">Your text blurb will go here. This is a placeholder where you can add information about yourself, your work, and your passion for 3D animation and visual effects.</p>
         </section>
 
         <section class="demo-reel-section">
@@ -43,22 +54,32 @@
             </div>
         </section>
 
-        <section class="work-preview films-preview">
-            <a href="films.html" class="work-section-link">
-                <div class="work-section-content">
-                    <h2>Films</h2>
-                    <p>Explore my animated short films and narrative work</p>
-                    <span class="view-more">View Films →</span>
-                </div>
-            </a>
-        </section>
-
         <section class="work-preview work-3d-preview">
             <a href="3d-work.html" class="work-section-link">
                 <div class="work-section-content">
                     <h2>3D Work</h2>
                     <p>Character modeling, environments, lighting, and visual effects</p>
                     <span class="view-more">View 3D Work →</span>
+                </div>
+            </a>
+        </section>
+
+        <section class="work-preview tools-preview">
+            <a href="tools.html" class="work-section-link">
+                <div class="work-section-content">
+                    <h2>Tools</h2>
+                    <p>Software and tools I use in my workflow</p>
+                    <span class="view-more">View Tools →</span>
+                </div>
+            </a>
+        </section>
+
+        <section class="work-preview films-preview">
+            <a href="films.html" class="work-section-link">
+                <div class="work-section-content">
+                    <h2>Films</h2>
+                    <p>Explore my animated short films and narrative work</p>
+                    <span class="view-more">View Films →</span>
                 </div>
             </a>
         </section>
@@ -75,8 +96,30 @@
     </main>
 
     <footer>
-        <p>© 2024 Your Name. All rights reserved.</p>
+        <p>© 2024 Sydney Gardner. All rights reserved.</p>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.getElementById('hamburger');
+            const navLinks = document.getElementById('navLinks');
+            
+            if (hamburger && navLinks) {
+                hamburger.addEventListener('click', function() {
+                    hamburger.classList.toggle('active');
+                    navLinks.classList.toggle('active');
+                });
+                
+                // Close menu when clicking on a link
+                const links = navLinks.querySelectorAll('a');
+                links.forEach(link => {
+                    link.addEventListener('click', function() {
+                        hamburger.classList.remove('active');
+                        navLinks.classList.remove('active');
+                    });
+                });
+            }
+        });
+    </script>
 </body>
 </html>
 

@@ -10,13 +10,19 @@
     <header>
         <nav>
             <div class="logo">
-                <a href="index.html">Your Name</a>
+                <a href="index.html">Sydney Gardner</a>
             </div>
-            <ul class="nav-links">
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="reels.html">Reels</a></li>
-                <li><a href="films.html">Films</a></li>
                 <li><a href="3d-work.html">3D Work</a></li>
+                <li><a href="tools.html">Tools</a></li>
+                <li><a href="films.html">Films</a></li>
                 <li><a href="about.html" class="active">About</a></li>
             </ul>
         </nav>
@@ -104,8 +110,29 @@
     </main>
 
     <footer>
-        <p>© 2024 Your Name. All rights reserved.</p>
+        <p>© 2024 Sydney Gardner. All rights reserved.</p>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.getElementById('hamburger');
+            const navLinks = document.getElementById('navLinks');
+            
+            if (hamburger && navLinks) {
+                hamburger.addEventListener('click', function() {
+                    hamburger.classList.toggle('active');
+                    navLinks.classList.toggle('active');
+                });
+                
+                const links = navLinks.querySelectorAll('a');
+                links.forEach(link => {
+                    link.addEventListener('click', function() {
+                        hamburger.classList.remove('active');
+                        navLinks.classList.remove('active');
+                    });
+                });
+            }
+        });
+    </script>
 </body>
 </html>
 
