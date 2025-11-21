@@ -29,57 +29,70 @@
         </section>
 
         <section class="content-section">
-            <h2>CG Generalist Reel</h2>
-            <div class="youtube-container">
-                <a href="https://www.youtube.com/watch?v=YOUR_VIDEO_ID" target="_blank" class="youtube-link">
-                    <div class="youtube-placeholder">
-                        <div class="play-button">▶</div>
-                        <p>Watch CG Generalist Reel on YouTube</p>
-                    </div>
-                </a>
+            <div class="reel-selector">
+                <button class="reel-btn active" data-reel="fx" id="fx-btn">FX Artist Reel</button>
+                <button class="reel-btn" data-reel="cg" id="cg-btn">CG Generalist Reel</button>
             </div>
-            <div class="content-section">
-                <h3>Breakdown</h3>
-                <p>This reel showcases my work in modeling, texturing, lighting, and rendering across various projects. Each project demonstrates different aspects of the 3D pipeline, from character creation to environmental design.</p>
-            </div>
-        </section>
 
-        <section class="content-section">
-            <h2>FX Reel</h2>
-            <div class="youtube-container">
-                <a href="https://www.youtube.com/watch?v=YOUR_FX_VIDEO_ID" target="_blank" class="youtube-link">
-                    <div class="youtube-placeholder">
-                        <div class="play-button">▶</div>
-                        <p>Watch FX Reel on YouTube</p>
-                    </div>
-                </a>
-            </div>
-            <div class="content-section">
-                <h3>Breakdown</h3>
-                <p>This reel focuses on visual effects work including simulations, particle effects, fluid dynamics, and procedural generation. Created using Houdini, Maya, and various rendering engines.</p>
-            </div>
-        </section>
-
-        <section class="content-section">
-            <h2>Additional Reels</h2>
-            <div class="work-grid">
-                <div class="work-item">
-                    <div class="work-item-image"></div>
-                    <div class="work-item-content">
-                        <h3>Character Animation Reel</h3>
-                        <p>Showcasing character animation work and rigging skills.</p>
-                    </div>
+            <div class="reel-content active" id="fx-reel">
+                <h2>FX Artist Reel</h2>
+                <div class="youtube-container">
+                    <a href="https://www.youtube.com/watch?v=YOUR_FX_VIDEO_ID" target="_blank" class="youtube-link">
+                        <div class="youtube-placeholder">
+                            <div class="play-button">▶</div>
+                            <p>Watch FX Artist Reel on YouTube</p>
+                        </div>
+                    </a>
                 </div>
-                <div class="work-item">
-                    <div class="work-item-image"></div>
-                    <div class="work-item-content">
-                        <h3>Lighting Reel</h3>
-                        <p>Demonstrating lighting and compositing techniques.</p>
-                    </div>
+                <div class="content-section">
+                    <h3>Breakdown</h3>
+                    <p>This reel focuses on visual effects work including simulations, particle effects, fluid dynamics, and procedural generation. Created using Houdini, Maya, and various rendering engines.</p>
+                </div>
+            </div>
+
+            <div class="reel-content" id="cg-reel">
+                <h2>CG Generalist Reel</h2>
+                <div class="youtube-container">
+                    <a href="https://www.youtube.com/watch?v=YOUR_VIDEO_ID" target="_blank" class="youtube-link">
+                        <div class="youtube-placeholder">
+                            <div class="play-button">▶</div>
+                            <p>Watch CG Generalist Reel on YouTube</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="content-section">
+                    <h3>Breakdown</h3>
+                    <p>This reel showcases my work in modeling, texturing, lighting, and rendering across various projects. Each project demonstrates different aspects of the 3D pipeline, from character creation to environmental design.</p>
                 </div>
             </div>
         </section>
     </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const fxBtn = document.getElementById('fx-btn');
+            const cgBtn = document.getElementById('cg-btn');
+            const fxReel = document.getElementById('fx-reel');
+            const cgReel = document.getElementById('cg-reel');
+
+            // FX Artist is default - already set in HTML, but ensure it's correct
+            // Initial state is already correct (FX active), so this is just for safety
+
+            fxBtn.addEventListener('click', function() {
+                fxReel.classList.add('active');
+                fxBtn.classList.add('active');
+                cgReel.classList.remove('active');
+                cgBtn.classList.remove('active');
+            });
+
+            cgBtn.addEventListener('click', function() {
+                cgReel.classList.add('active');
+                cgBtn.classList.add('active');
+                fxReel.classList.remove('active');
+                fxBtn.classList.remove('active');
+            });
+        });
+    </script>
 
     <footer>
         <p>© 2024 Your Name. All rights reserved.</p>
