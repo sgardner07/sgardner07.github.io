@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Procedural Grass Tool</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div style="height: 30px;"></div>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">Sydney Gardner</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="reels.html">Reels</a></li>
+                <li><a href="3d-work.html" class="active">3D Work</a></li>
+                <li><a href="films.html">Films</a></li>
+                <li><a href="resume_page.html">Resume</a></li>
+                <li><a href="about.html">About Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h1>Procedural Grass Tool</h1>
+            <h3>A production-ready solution for simulating large fields of grass</h3>
+        </section>
+
+        <section class="section">
+            <div class="image-column">
+                <div class="project-image-container">
+                    <video controls class="project-image">
+                        <source src="project_media/bobo_procedural_grass/GrassTool_Explanation.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="spacer"></div>
+                    <h3>Render using procedural grass tool</h3>
+                    <video controls class="project-image">
+                        <source src="project_media/bobo_procedural_grass/grass_test_render.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+
+                    <div class="spacer"></div>
+                    <h3>Simulated grass blades</h3>
+                    <video controls class="project-image">
+                        <source src="project_media/bobo_procedural_grass/GrassTool_02.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+
+                    <div class="spacer"></div>
+                    <h3>Procedurally animated grass blades</h3>
+                    <video controls class="project-image">
+                        <source src="project_media/bobo_procedural_grass/GrassTool_03.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                
+            </div>
+        </section>
+
+        <section class="content-section" style="max-width: 800px; margin: 0 auto;">
+            <div class="spacer" style="height: 40px;"></div>
+            <h2>Project Breakdown</h2>
+            <p>As an FX technical director on Brigham Young University's 2026 animated short film, I was tasked with filling a large garden and forest with art-directable grass that had keep-alive, as well as the capability to interact with animation. I started by using the Houdini grooming workflow and filling the entire garden and forest with grass, but when trying to add keep-alive and simulation,
+                I realized that it was going to be way too heavy of a workflow to be used in our pipeline.</br></br>My first fix was to use frustum culling, importing the shot camera from its USD layer and creating a frustum from it, accounting for camera movement, keeping only the grass that's within the field of view. In certain shots, however, there still was too much grass to simulate efficiently. The next fix
+                was to separate the grass based on whether it was close to the character or not. Blades close to the character would be draw more attention, so I wanted to make them more detailed. Grass farther away would be less noticeable, so it didn't need to be simulated or have as detailed geometry. Essentially, I wanted to create an LOD system for the grass.</br></br>I created a bounding box based off of the character animation USD layer and used that to determine which grass blades needed to be simulated to interact with characte animation and which could be procedurally animated with keep-alive. After adding this functionality, I changed my approach to creating the grass itself.
+                Instead of creating the grass using the Houdini grooming workflow, I started by scattering points that represent the "root" of each grass blade, distributed based off of density attributes painted on the ground plane. After frustum culling and separating the points based off of animation, I copied lines representing grass blades to the points that needed to be simulated. Using more ground plane attributes,
+                I groomed the lines to create more realistic looking grass blades. Then, using the imported USD character animation as a collider, I simulated the lines. The final step to create the simulated blades was to use the simulated lines to point deform geometric grass blades.</br></br>To create the procedurally animated grass, I took the leftover points gave them a randomized point velocity based on time, then copied it to the point normal. 
+                Like the simulated grass, I copied lines representing the "backbone" of the grass blade to these points and groomed them using ground plane attributes. Finally, I swept a line across the procedurally animated "backbone" to create the a realistically shaped grass blade that would accurately reflect in the light.</br></br>Combining the the simulated and procedurally animated grass, I was able to create a huge grass field that was art-directable 
+                through painted attributes, efficient through using an LOD system, and interactive with character animation. I packaged the tool as a Houdini Digital Asset (HDA) with an intuitive UI that allowed for easy use by all FX artists in our pipeline. 
+
+            </li>
+            <ul style="margin: 20px 0; padding-left: 30px; line-height: 1.8;">
+                <li style="font-size: 16px">Tool (HDA) built in Houdini using VEX and Houdini Vellum workflows</li>
+                <li style="font-size: 16px">Tool is fully compatible with a USD production pipeline </li>
+            </ul>
+        </section>
+
+        <section class="content-section" style="text-align: center; margin-top: 40px;">
+            <a href="3d-work.html" class="section-link">← Back to 3D Work</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Sydney Gardner</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.getElementById('hamburger');
+            const navLinks = document.getElementById('navLinks');
+            
+            if (hamburger && navLinks) {
+                hamburger.addEventListener('click', function() {
+                    hamburger.classList.toggle('active');
+                    navLinks.classList.toggle('active');
+                });
+                
+                const links = navLinks.querySelectorAll('a');
+                links.forEach(link => {
+                    link.addEventListener('click', function() {
+                        hamburger.classList.remove('active');
+                        navLinks.classList.remove('active');
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sugar Cookie Product Video</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div style="height: 30px;"></div>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">Sydney Gardner</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="reels.html">Reels</a></li>
+                <li><a href="3d-work.html" class="active">3D Work</a></li>
+                <li><a href="films.html">Films</a></li>
+                <li><a href="resume_page.html">Resume</a></li>
+                <li><a href="about.html">About Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h1>Sugar Cookie</h1>
+            <p style="text-align: center;">A mock product video for a sugar cookie company.</p>
+        </section>
+
+        <section class="content-section">
+            <div class="image-column">
+                <div class="project-image-container">
+                    <video controls poster="project_media/sugar_cookie/Leister_Sydney_Checkin3_FinalBeautyShot.png" class="project-image">
+                        <source src="project_media/sugar_cookie/FinalCookieAnimation_slower.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="project-image-container">
+                    <img src="project_media/sugar_cookie/Leister_Sydney_Checkin3_FinalBeautyShot.png" alt="Image 1" class="project-image">
+                </div>
+                <div class="project-image-container">
+                    <img src="project_media/sugar_cookie/Leister_Sydney_Checkin3_East.png" alt="Image 2" class="project-image">
+                </div>
+                <div class="project-image-container">
+                    <img src="project_media/sugar_cookie/Leister_Sydney_Checkin3_North.png" alt="Image 3" class="project-image">
+                </div>
+                <div class="project-image-container">
+                    <img src="project_media/sugar_cookie/Leister_Sydney_Checkin3_South.png" alt="Image 3" class="project-image">
+                </div>
+                <div class="project-image-container">
+                    <img src="project_media/sugar_cookie/Leister_Sydney_Checkin3_West.png" alt="Image 3" class="project-image">
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section" style="max-width: 800px; margin: 0 auto;">
+            <h2>Project Breakdown</h2>
+            <p>I love a good sugar cookie! This project was heavily inspired by the product photography and videos for Crumbl Cookies. I live in an area where Crumbl Cookies are heavily advertised, so I thought I'd try to make product video myself and have some fun with it! I love bright colors, so I wanted to incorporate limes and lime green into the project. I'm really happy with how my first dip into product videos turned out!</li>
+            <ul style="margin: 20px 0; padding-left: 30px; line-height: 1.8;">
+                <li style="font-size: 16px">Responsible for all aspects. Sugar Cookie was modeled in Maya and textured in Substance Painter. FX created in Houdini, project rendered in Renderman.</li>
+                <li style="font-size: 16px">FX created in Houdini, project lit in Houdini Solaris and rendered in Renderman. </li>
+            </ul>
+        </section>
+
+        <section class="content-section" style="text-align: center; margin-top: 40px;">
+            <a href="3d-work.html" class="section-link">← Back to 3D Work</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Sydney Gardner</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.getElementById('hamburger');
+            const navLinks = document.getElementById('navLinks');
+            
+            if (hamburger && navLinks) {
+                hamburger.addEventListener('click', function() {
+                    hamburger.classList.toggle('active');
+                    navLinks.classList.toggle('active');
+                });
+                
+                const links = navLinks.querySelectorAll('a');
+                links.forEach(link => {
+                    link.addEventListener('click', function() {
+                        hamburger.classList.remove('active');
+                        navLinks.classList.remove('active');
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
+

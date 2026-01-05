@@ -6,10 +6,11 @@
     <title>Demo Reels - Sydney Gardner</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div style="height: 30px;"></div>
     <header>
         <nav>
             <div class="logo">
@@ -24,54 +25,200 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="reels.html" class="active">Reels</a></li>
                 <li><a href="3d-work.html">3D Work</a></li>
-                <li><a href="tools.html">Tools</a></li>
                 <li><a href="films.html">Films</a></li>
-                <li><a href="about.html">About</a></li>
+                <li><a href="resume_page.html">Resume</a></li>
+                <li><a href="about.html">About Me</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="page-header">
+        <section>
             <h1>Demo Reels</h1>
-            <p>Showcasing my best work in 3D animation and visual effects</p>
         </section>
 
-        <section class="content-section">
-            <div class="reel-selector">
-                <button class="reel-btn active" data-reel="fx" id="fx-btn">FX Artist Reel</button>
-                <button class="reel-btn" data-reel="cg" id="cg-btn">CG Generalist Reel</button>
-            </div>
+        <div class="reel-selector">
+            <button class="reel-btn active" data-reel="fx" id="fx-btn">FX Artist Reel</button>
+            <button class="reel-btn" data-reel="cg" id="cg-btn">CG Generalist Reel</button>
+        </div>
 
+        <section class="content-section">
             <div class="reel-content active" id="fx-reel">
                 <h2>FX Artist Reel</h2>
                 <div class="youtube-container">
-                    <a href="https://www.youtube.com/watch?v=YOUR_FX_VIDEO_ID" target="_blank" class="youtube-link">
-                        <div class="youtube-placeholder">
-                            <div class="play-button">▶</div>
-                            <p>Watch FX Artist Reel on YouTube</p>
-                        </div>
-                    </a>
+                    <iframe src="https://player.vimeo.com/video/1131805238?title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div class="content-section">
-                    <h3>Breakdown</h3>
-                    <p>This reel focuses on visual effects work including simulations, particle effects, fluid dynamics, and procedural generation. Created using Houdini, Maya, and various rendering engines.</p>
+                    <h3 style="font-weight: 700; font-size: 30px">Breakdown</h3>
+                    <ul>
+                        <li style="font-weight: 700">BYU Student Film - Coin Waves (1-2)
+                            <p style="margin-left: 50px; font-weight: 300;">
+                                Responsible for coin FX. Massive, large-scale FX of waterfalls and waves of coins created for BYU's 2025 student film. Waterfalls were simulated using a combination of Houdini RBD and FLIP fluids, with the coin waves simulated using FLIP fluids and Houdini POPS. Shots were rendered in RenderMan and FX were created within in a USD production workflow. 
+                            </p>
+                        </li>
+
+                        <li style="font-weight: 700">BYU Student Film - Snowy Skeleton (3-4)
+                            <p style="margin-left: 50px; font-weight: 300;">
+                                Responsible for snow and dust FX. Snow was created using Houdini POPS and dust was created with Houdini Pyro. I shaded these in Houdini Solaris, and the shots were rendered in RenderMan. FX were created within a USD production workflow. 
+                            </p>
+                        </li>
+
+                        <li style="font-weight: 700">BYU Student Film - Snowy Door (5)
+                            <p style="margin-left: 50px; font-weight: 300;">
+                                Responsible for snow FX. Similar to the previous shots, snow was created using Houdini POPS, shaded in Houdini Solaris, and the shot was rendered in RenderMan. FX were created within a USD production workflow.
+                            </p>
+                        </li>
+
+                        <li style="font-weight: 700">BYU Student Film - Dusty Sigil (6)
+
+                            <p style="margin-left: 50px; font-weight: 300;">
+                                Responsible for dust FX and sigil light animation. Dust was created with Houdini Pyro, and the sigil light was animated using a Houdini Solaris animated shader. Rendered in RenderMan. FX were created within a USD production workflow. 
+                            </p>
+                        </li>
+
+                        <li style="font-weight: 700">Rainy Night (7)
+                            <p style="margin-left: 50px; font-weight: 300;">
+                                Responsible for tree motion, rain, water, grass, and fog FX, FX shading, and lighting. Tree motion and grass were simulated with Houdini Vellum and custom constraints. Rain was created with layers of Houdini POPS simulations. Dripping water from gutters and splashing on porch was simulated with Houdini FLIP Fluids. Fog was simulated with Houdini Pyro. All FX were lit and shaded in Houdini Solaris, and project was rendered in Houdini Karma. 
+                            </p>
+                        </li>
+
+                        <li style="font-weight: 700">Torches (8)
+                            <p style="margin-left: 50px; font-weight: 300;">
+                                Responsible for flame and sparks FX, FX shading, and lighting. The flame was created with Houdini Pyro, and the sparks with Houdini POPS. Flames and sparks were shaded and lit in Houdini Solaris and rendered in Houdini Karma. 
+                            </p>
+                        </li>
+
+                        <li style="font-weight: 700">Shattered Mirror (9)
+                            <p style="margin-left: 50px; font-weight: 300;">
+                                Responsible for shattering FX, FX shading, and lighting. Shattering was done with Houdini RBD and shaded and lit in Houdini Solaris. Rendered with Houdini Karma. 
+                            </p>
+                        </li>
+
+                        <li style="font-weight: 700">Python Procedural Modeling Script (10)
+                            <p style="margin-left: 50px; font-weight: 300;">
+                                Responsible for all aspects. This Python script generates a custom UI in Maya, allowing the user to choose between different options for a custom 3D model of a train, including material generation. 
+                            </p>
+                        </li>
+              
+                        <li style="font-weight: 700">C++ Raytracer (11)
+                            <p style="margin-left: 50px; font-weight: 300;">
+                                Responsible for all aspects. This raytracer was written in C++ to implement Phong shading along with multiple points of light. Images were rendered with the raytracer.</p>
+                            </p>
+                        </li>
+
+                        <li style="font-weight: 700">BYU Student Film - Grass Tool (12)
+                            <p style="margin-left: 50px; font-weight: 300;">
+                                Responsible for grass modeling, collision, and LOD tool. This tool allows for large-scale grass fields to be created and simulated quickly and efficiently. The tool includes collision detection using Houdini Vellum and an LOD option for farther away grass blades to save memory. The tool was build in Houdini using VEX and Houdini Vellum. Grass blades were shaded in Substance Painter. Scene was rendered in Houdini RenderMan. 
+                            </p>
+                        </li>
+
+
+                      </ul>
+                    <p>
                 </div>
             </div>
 
             <div class="reel-content" id="cg-reel">
                 <h2>CG Generalist Reel</h2>
                 <div class="youtube-container">
-                    <a href="https://www.youtube.com/watch?v=YOUR_VIDEO_ID" target="_blank" class="youtube-link">
-                        <div class="youtube-placeholder">
-                            <div class="play-button">▶</div>
-                            <p>Watch CG Generalist Reel on YouTube</p>
-                        </div>
-                    </a>
+                    <iframe src="https://player.vimeo.com/video/1130791805?title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div class="content-section">
-                    <h3>Breakdown</h3>
-                    <p>This reel showcases my work in modeling, texturing, lighting, and rendering across various projects. Each project demonstrates different aspects of the 3D pipeline, from character creation to environmental design.</p>
+                    <h3 style="font-weight: 700; font-size: 30px">Breakdown</h3>
+                    <ul>
+                        <li style="font-weight: 700">BYU Student Film - Coin Waves (1-2)
+                            <p style="margin-left: 50px; font-weight: 300;">
+                                Responsible for coin FX. Massive, large-scale FX of a falling waterfall of coins created for BYU's 2025 student film. Waterfalls were simulated using a combination of Houdini RBD and FLIP fluids, with the coin waves simulated using only FLIP fluids. Shot was rendered in RenderMan and FX were created within in a USD production workflow. 
+                            </p>
+                        </li>
+
+                        <li style="font-weight: 700">BYU Student Film - Snowy Skeleton (3-4)
+                            <p style="margin-left: 50px; font-weight: 300;">
+                                Responsible for snow and dust FX. Snow was created using Houdini POPS and dust was created with Houdini Pyro. I shaded these in Houdini Solaris, and the shots were rendered in RenderMan. FX were created within a USD production workflow. 
+                            </p>
+                        </li>
+
+                        <li style="font-weight: 700">BYU Student Film - Snowy Door (5)
+                            <p style="margin-left: 50px; font-weight: 300;">
+                                Responsible for snow FX. Similar to the previous shots, snow was created using Houdini POPS, shaded in Houdini Solaris, and the shot was rendered in RenderMan. FX were created within a USD production workflow.
+                            </p>
+                        </li>
+
+                        <li style="font-weight: 700">BYU Student Film - Dusty Sigil (6)
+
+                            <p style="margin-left: 50px; font-weight: 300;">
+                                Responsible for dust FX and sigil light animation. Dust was created with Houdini Pyro, and the sigil light was animated using a Houdini Solaris animated shader. Rendered in RenderMan. FX were created within a USD production workflow. 
+                            </p>
+                        </li>
+
+                        <li style="font-weight: 700">Torches (7)
+                            <p style="margin-left: 50px; font-weight: 300;">
+                                Responsible for flame and sparks FX, FX shading, and lighting. The flame was created with Houdini Pyro, and the sparks with Houdini POPS. Flames and sparks were shaded and lit in Houdini Solaris and rendered in Houdini Karma. 
+                            </p>
+                        </li>
+
+                        <li style="font-weight: 700">Shattered Mirror (8)
+                            <p style="margin-left: 50px; font-weight: 300;">
+                                Responsible for shattering FX, FX shading, and lighting. Shattering was done with Houdini RBD and shaded and lit in Houdini Solaris. Rendered with Houdini Karma. 
+                            </p>
+                        </li>
+
+                        <li style="font-weight: 700">Rainy Night (9)
+                            <p style="margin-left: 50px; font-weight: 300;">
+                                Responsible for tree motion, rain, water, grass, and fog FX, FX shading, and lighting. Tree motion and grass were simulated with Houdini Vellum and custom constraints. Rain was created with layers of Houdini POPS simulations. Dripping water from gutters and splashing on porch was simulated with Houdini FLIP Fluids. Fog was simulated with Houdini Pyro. All FX were lit and shaded in Houdini Solaris, and project was rendered in Houdini Karma. 
+                            </p>
+                        </li>
+
+                        <li style="font-weight: 700">Sugar Cookie (10)
+                            <p style="margin-left: 50px; font-weight: 300;">
+                                Responsible for all aspects. Cookie, frosting, whipped cream, and lime were modeled in Maya and shaded in Substance Painter. Particles were simulated with Houdini POPS. Scene was lit in Houdini Solaris and rendered with Houdini RenderMan. 
+                            </p>
+                        </li>
+
+                        <li style="font-weight: 700">Old Suitcase (11)
+                            <p style="margin-left: 50px; font-weight: 300;">
+                                Responsible for shading. The suitcase was shaded in Substance painter and Rendered in Houdini RenderMan. 
+                            </p>
+                        </li>
+
+                        <li style="font-weight: 700">Dia de Muertos Ofrenda (12)
+                            <p style="margin-left: 50px; font-weight: 300;">
+                                Responsible for all aspects. Assets were modeled in Maya and shaded in Substance Painter. Flames were created using Maya Pyro FX. Scene was lit in Maya and rendered in Arnold. 
+                            </p>
+                        </li>
+
+                        <li style="font-weight: 700">Potted Plants (13)
+                            <p style="margin-left: 50px; font-weight: 300;">
+                                Responsible for all aspects. Assets were modeled in Maya. Main plant was rigged and animated in Maya. All assets were shaded in Substance Painter. Cloth curtains were simulated with a Maya Cloth FX Simulation. Scene was lit in Maya and rendered in Arnold. 
+                            </p>
+                        </li>
+
+                        <li style="font-weight: 700">Curly Hair Groom (14)
+                            <p style="margin-left: 50px; font-weight: 300;">
+                                Responsible for groom and shading. Groom was created using Houdini grooming workflow, combined with a VEX script to create the curls. Shaded in Houdini Solaris and rendered in Houdini Karma.
+                            </p>
+                        </li>
+
+                        <li style="font-weight: 700">BYU Student Film - Grass Tool (15)
+                            <p style="margin-left: 50px; font-weight: 300;">
+                                Responsible for grass modeling, collision, and LOD tool. This tool allows for large-scale grass fields to be created and simulated quickly and efficiently. The tool includes collision detection using Houdini Vellum and an LOD option for farther away grass blades to save memory. The tool was build in Houdini using VEX and Houdini Vellum. Grass blades were shaded in Substance Painter. Scene was rendered in Houdini RenderMan. 
+                            </p>
+                        </li>
+
+                        <li style="font-weight: 700">Python Procedural Modeling Script (16)
+                            <p style="margin-left: 50px; font-weight: 300;">
+                                Responsible for all aspects. This Python script generates a custom UI in Maya, allowing the user to choose between different options for a custom 3D model of a train, including material generation. 
+                            </p>
+                        </li>
+
+                        <li style="font-weight: 700">C++ Raytracer (17)
+                            <p style="margin-left: 50px; font-weight: 300;">
+                                Responsible for all aspects. This raytracer was written in C++ to implement Phong shading along with multiple points of light. Images were rendered with the raytracer.</p>
+                            </p>
+                        </li>
+
+                      </ul>
+                    <p>
                 </div>
             </div>
         </section>
@@ -79,32 +226,39 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const fxBtn = document.getElementById('fx-btn');
-            const cgBtn = document.getElementById('cg-btn');
-            const fxReel = document.getElementById('fx-reel');
-            const cgReel = document.getElementById('cg-reel');
-
-            // FX Artist is default - already set in HTML, but ensure it's correct
-            // Initial state is already correct (FX active), so this is just for safety
-
-            fxBtn.addEventListener('click', function() {
-                fxReel.classList.add('active');
-                fxBtn.classList.add('active');
-                cgReel.classList.remove('active');
-                cgBtn.classList.remove('active');
-            });
-
-            cgBtn.addEventListener('click', function() {
-                cgReel.classList.add('active');
-                cgBtn.classList.add('active');
-                fxReel.classList.remove('active');
-                fxBtn.classList.remove('active');
+            const buttons = document.querySelectorAll('.reel-btn');
+            const reels = document.querySelectorAll('.reel-content');
+            
+            buttons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const targetReel = button.getAttribute('data-reel');
+                    
+                    // Remove active class from all buttons and reels, and pause videos
+                    buttons.forEach(btn => btn.classList.remove('active'));
+                    reels.forEach(reel => {
+                        const video = reel.querySelector('iframe');
+                        if (video && reel.classList.contains('active')) {
+                            // Pause video in currently active reel
+                            const currentSrc = video.src;
+                            video.src = '';
+                            video.src = currentSrc;
+                        }
+                        reel.classList.remove('active');
+                    });
+                    
+                    // Add active class to clicked button and corresponding reel
+                    button.classList.add('active');
+                    const activeReel = document.getElementById(targetReel + '-reel');
+                    if (activeReel) {
+                        activeReel.classList.add('active');
+                    }
+                });
             });
         });
     </script>
 
     <footer>
-        <p>© 2024 Sydney Gardner. All rights reserved.</p>
+        <p>© 2025 Sydney Gardner. All rights reserved.</p>
     </footer>
     <script>
         document.addEventListener('DOMContentLoaded', function() {

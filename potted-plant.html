@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Potted Plant Palooza!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div style="height: 30px;"></div>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">Sydney Gardner</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="reels.html">Reels</a></li>
+                <li><a href="3d-work.html" class="active">3D Work</a></li>
+                <li><a href="films.html">Films</a></li>
+                <li><a href="resume_page.html">Resume</a></li>
+                <li><a href="about.html">About Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h1>Potted Plant Palooza!</h1>
+            <p>A seemingly innocent potted plant comes to life....</p>
+        </section>
+
+        <section class="content-section">
+            <div class="image-column">
+                <div class="project-image-container">
+                    <video controls class="project-image">
+                        <source src="project_media/potted_plant_mimic/SydneyLeister_FinalMimic.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="project-image-container">
+                    <video controls class="project-image">
+                        <source src="project_media/potted_plant_mimic/SydneyLeister_FinalRig.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                
+            </div>
+        </section>
+
+        <section class="content-section" style="max-width: 800px; margin: 0 auto;">
+            <h2>Project Breakdown</h2>
+            <p>An innocent looking potted plant comes to life... turning out to be a monster with a bite! The initial idea was to create some sort of ordinary object that turns into a monster, like a mimic in the game Dungeons and Dragons. I had a lot of fun coming up with the idea, design, and movement for the transformation from plant to monster for this character.This was my first rigging project, and it took some time to figure out all of the ins and outs of rigging, but I learned a lot!</li>
+            <ul>
+                <li style="font-size: 16px">Responsible for all aspects</li>
+                <li style="font-size: 16px">Character and environment modeled, rigged, and animated in Maya</li>
+                <li style="font-size: 16px">Textured in Substance Painter</li>
+                <li style="font-size: 16px">Curtain cloth FX created in Maya</li>
+                <li style="font-size: 16px">Lit and rendered in Arnold</li>
+            </ul>
+        </section>
+
+        <section class="content-section" style="text-align: center; margin-top: 40px;">
+            <a href="3d-work.html" class="section-link">← Back to 3D Work</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Sydney Gardner</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.getElementById('hamburger');
+            const navLinks = document.getElementById('navLinks');
+            
+            if (hamburger && navLinks) {
+                hamburger.addEventListener('click', function() {
+                    hamburger.classList.toggle('active');
+                    navLinks.classList.toggle('active');
+                });
+                
+                const links = navLinks.querySelectorAll('a');
+                links.forEach(link => {
+                    link.addEventListener('click', function() {
+                        hamburger.classList.remove('active');
+                        navLinks.classList.remove('active');
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
+

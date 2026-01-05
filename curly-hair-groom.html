@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curly Hair Groom</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div style="height: 30px;"></div>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">Sydney Gardner</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="reels.html">Reels</a></li>
+                <li><a href="3d-work.html" class="active">3D Work</a></li>
+                <li><a href="films.html">Films</a></li>
+                <li><a href="resume_page.html">Resume</a></li>
+                <li><a href="about.html">About Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h1>Curly Hair Groom</h1>
+            <p>A groom of a curly hairstyle</p>
+        </section>
+
+        <section class="content-section">
+            <div class="image-column">
+                <div class="project-image-container">
+                    <video controls class="project-image">
+                        <source src="project_media/curly_hair_groom/curlygroom_turnaround.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section" style="max-width: 800px; margin: 0 auto;">
+            <h2>Project Breakdown</h2>
+            <p>This groom was my first time using Houdini's grooming tools, and I ambitiously chose a curly-haired reference image, thinking that it couldn't be too difficult to art-direct and manage curls. I quickly learned that it was a lot more difficult than I thought! With a lot of trial, error, and research, I found a great solution for creating curls involving quaternions and matrices. This project helped me realize how I can combine math and code with pre-existing tools to get the look that I want.</li>
+            <ul>
+                <li style="font-size: 16px">Responsible for groom</li>
+                <li style="font-size: 16px">Groom created using Houdini's grooming workflow</li>
+                <li style="font-size: 16px">Rendered with Houdini Karma</li>
+            </ul>
+        </section>
+
+        <section class="content-section" style="text-align: center; margin-top: 40px;">
+            <a href="3d-work.html" class="section-link">← Back to 3D Work</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Sydney Gardner</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.getElementById('hamburger');
+            const navLinks = document.getElementById('navLinks');
+            
+            if (hamburger && navLinks) {
+                hamburger.addEventListener('click', function() {
+                    hamburger.classList.toggle('active');
+                    navLinks.classList.toggle('active');
+                });
+                
+                const links = navLinks.querySelectorAll('a');
+                links.forEach(link => {
+                    link.addEventListener('click', function() {
+                        hamburger.classList.remove('active');
+                        navLinks.classList.remove('active');
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
+

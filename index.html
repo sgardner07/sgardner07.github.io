@@ -6,10 +6,11 @@
     <title>Sydney Gardner - 3D Animation Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div style="height: 30px;"></div>
     <header>
         <nav>
             <div class="logo">
@@ -21,55 +22,131 @@
                 <span></span>
             </div>
             <ul class="nav-links" id="navLinks">
-                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="reels.html">Reels</a></li>
-                <li><a href="3d-work.html">3D Work</a></li>
-                <li><a href="tools.html">Tools</a></li>
+                <li><a href="3d-work.html" class="active">3D Work</a></li>
                 <li><a href="films.html">Films</a></li>
-                <li><a href="about.html">About</a></li>
+                <li><a href="resume_page.html">Resume</a></li>
+                <li><a href="about.html">About Me</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="hero-section">
-            <div class="hero-content">
-                <h1 class="hero-name">Sydney Gardner</h1>
+        <section class="section">
+            <div class="spacer" style="height: 30px;"></div>
+            <div class="content">
+                <h1 class="name">sydney gardner</h1>
             </div>
-            <p class="hero-blurb">Your text blurb will go here. This is a placeholder where you can add information about yourself, your work, and your passion for 3D animation and visual effects.</p>
+            <div class="content" style="margin-top:20px">
+                <div>
+                    <h2>FX Technical Director</h2>
+                </div>
+            </div>
+            <div class="spacer" style="height: 30px;"></div>
         </section>
 
-        <section class="demo-reel-section">
-            <div class="section-content">
-                <h2>Demo Reel</h2>
+
+        <section class="section">
+            <div class="reel-content active" id="fx-reel">
                 <div class="youtube-container">
-                    <a href="https://www.youtube.com/watch?v=YOUR_VIDEO_ID" target="_blank" class="youtube-link">
-                        <div class="youtube-placeholder">
-                            <div class="play-button">▶</div>
-                            <p>Watch Demo Reel on YouTube</p>
-                        </div>
-                    </a>
+                    <iframe src="https://player.vimeo.com/video/1131805238?title=0&byline=0&portrait=0" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
                 </div>
                 <a href="reels.html" class="section-link">View All Reels →</a>
             </div>
+        </section>
+
+        <section class="spacer"></section>
+
+        
+        <section class = "section">
+            <div class="content">
+                <h2>Featured Work</h2>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="work-grid">
+                
+            
+                <a href="bobo_grass.html" class="work-item">
+                    <div class="work-item-image">
+                        <img src="project_media/bobo_procedural_grass/Bobo_Grass_Frame.png" alt="Grass Image" loading="lazy">
+                    </div>
+                    <div class="work-item-content">
+                        <h3>Procedural Grass Tool</h3>
+                        <p style="text-align: center;">A C++ raytracer implementing Phong shading, reflections, and multiple light sources</p>
+                    </div>
+                </a>
+                <a href="love_and_gold.html" class="work-item">
+                    <div class="work-item-image">
+                        <img src="project_media/love_and_gold/LNG_Frame.png" alt="Love and Gold" loading="lazy">
+                    </div>
+                    <div class="work-item-content">
+                        <h3>"Love and Gold"</h3>
+                        <p>My FX work on Brigham Young University's 2025 student film, a College Television Award Finalist!</p>
+                    </div>
+                </a>
+                <a href="rain-forest-fx.html" class="work-item">
+                    <div class="work-item-image">
+                        <img src="project_media/forest_rain/RainyForest_Frame.png" alt="Rainy Forest Image" loading="lazy">
+                    </div>
+                    <div class="work-item-content">
+                        <h3>Rainy Forest FX</h3>
+                        <p style="text-align: center;">A dark and stormy forest scene with some fun FX! </p>
+                    </div>
+                </a>
+                <a href="raytracer2.html" class="work-item">
+                    <div class="work-item-image">
+                        <img src="project_media/sugar_cookie/scene2.png" alt="Raytracer Image" loading="lazy">
+                    </div>
+                    <div class="work-item-content">
+                        <h3>C++ Raytracer</h3>
+                        <p style="text-align: center;">A C++ raytracer implementing Phong shading, reflections, and multiple light sources</p>
+                    </div>
+                </a>
+                <a href="project-sugar-cookie.html" class="work-item">
+                    <div class="work-item-image">
+                        <img src="project_media/sugar_cookie/Leister_Sydney_Checkin3_FinalBeautyShot.png" alt="Sugar Cookie Image" loading="lazy">
+                    </div>
+                    <div class="work-item-content">
+                        <h3>Sugar Cookie Product Video</h3>
+                        <p style="text-align: center;">A mock product video for a delicious sugar cookie.</p>
+
+                    </div>
+                </a>
+                <a href="shattering_mirror.html" class="work-item">
+                    <div class="work-item-image">
+                        <img src="project_media/shattering_mirror/Mirror_Shatter_Frame.png" alt="Mirror Image" loading="lazy">
+                    </div>
+                    <div class="work-item-content">
+                        <h3>Shattering Mirror</h3>
+                        <p style="text-align: center;">A practice in Rigid Body Dynamics and shattering FX</p>
+                    </div>
+                </a>
+                
+            </div>
+        </section>
+
+        <section class="spacer"></section>
+
+
+        <section class="work-preview tools-preview">
+            <a href="reels.html" class="work-section-link">
+                <div class="work-section-content">
+                    <h2>Reels</h2>
+                    <p>See my FX artist and CG generalist reels</p>
+                    <span class="view-more">View Reels →</span>
+                </div>
+            </a>
         </section>
 
         <section class="work-preview work-3d-preview">
             <a href="3d-work.html" class="work-section-link">
                 <div class="work-section-content">
                     <h2>3D Work</h2>
-                    <p>Character modeling, environments, lighting, and visual effects</p>
+                    <p>Tools, scripts, and modeling, shading, rigging, lighting, FX, and rendering projects</p>
                     <span class="view-more">View 3D Work →</span>
-                </div>
-            </a>
-        </section>
-
-        <section class="work-preview tools-preview">
-            <a href="tools.html" class="work-section-link">
-                <div class="work-section-content">
-                    <h2>Tools</h2>
-                    <p>Software and tools I use in my workflow</p>
-                    <span class="view-more">View Tools →</span>
                 </div>
             </a>
         </section>
@@ -78,7 +155,7 @@
             <a href="films.html" class="work-section-link">
                 <div class="work-section-content">
                     <h2>Films</h2>
-                    <p>Explore my animated short films and narrative work</p>
+                    <p>See my FX work on various animated short films</p>
                     <span class="view-more">View Films →</span>
                 </div>
             </a>
@@ -96,7 +173,7 @@
     </main>
 
     <footer>
-        <p>© 2024 Sydney Gardner. All rights reserved.</p>
+        <p>© 2025 Sydney Gardner. All rights reserved.</p>
     </footer>
     <script>
         document.addEventListener('DOMContentLoaded', function() {

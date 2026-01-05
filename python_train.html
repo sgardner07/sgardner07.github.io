@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Procedural Modeling Script</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div style="height: 30px;"></div>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">Sydney Gardner</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="reels.html">Reels</a></li>
+                <li><a href="3d-work.html" class="active">3D Work</a></li>
+                <li><a href="films.html">Films</a></li>
+                <li><a href="resume_page.html">Resume</a></li>
+                <li><a href="about.html">About Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h1>Python Procedural Modeling Script</h1>
+            <h3>A fun script for procedural modeling in Maya</h3>
+        </section>
+
+        <section class="section">
+            <div class="image-column">
+                <div class="project-image-container">
+                    <video controls class="project-image">
+                        <source src="project_media/python_train/SydneyLeister_TrainFinal.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section" style="max-width: 800px; margin: 0 auto;">
+            <div class="spacer" style="height: 40px;"></div>
+            <h2>Project Breakdown</h2>
+            <p>In an introductionary scripting class, one of my final assignments was to write a script that would procedurally model a train in Autodesk Maya. Coming from a computer science background, I was already familiar with Python scripting 
+                but wanted to add a fun twist to my assignment. I decided to create a custom Maya user interface that allows the user to choose between options for types of train cars as well as choose the train's material colors. After the user makes
+                their choices, the script generates a train with the chosen cars and colors. I had a lot of fun learning how to implement Python into Maya and seeing all of the things that can be done with scripting!
+
+            </li>
+            <ul style="margin: 20px 0; padding-left: 30px; line-height: 1.8;">
+                <li style="font-size: 16px">Script written in Python, implemented in Autodesk Maya</li>
+                <li style="font-size: 16px"><a href="https://github.com/sgardner07/Procedural-Train" style="text-align:left; margin-top: 0px; color:#293241; text-decoration: underline;"> Click HERE to see the code!</a></li>
+            </ul>
+        </section>
+
+        <section class="content-section" style="text-align: center; margin-top: 40px;">
+            <a href="3d-work.html" class="section-link">← Back to 3D Work</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Sydney Gardner</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.getElementById('hamburger');
+            const navLinks = document.getElementById('navLinks');
+            
+            if (hamburger && navLinks) {
+                hamburger.addEventListener('click', function() {
+                    hamburger.classList.toggle('active');
+                    navLinks.classList.toggle('active');
+                });
+                
+                const links = navLinks.querySelectorAll('a');
+                links.forEach(link => {
+                    link.addEventListener('click', function() {
+                        hamburger.classList.remove('active');
+                        navLinks.classList.remove('active');
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
+

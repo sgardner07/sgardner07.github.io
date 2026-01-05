@@ -3,10 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Your Name</title>
+    <title>About - Sydney Gardner</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .about-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            margin: 5px;
+            font-size: 16px;
+            font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-weight: 300;
+            border: 2px solid #c5d3db;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s;
+            color: #293241;
+            background: #c5d3db;
+            text-decoration: none;
+        }
+        .about-btn:hover {
+            border-color: #ccc;
+            color: #000;
+            background: #baccd6;
+        }
+    </style>
 </head>
 <body>
+    <div style="height: 30px;"></div>
     <header>
         <nav>
             <div class="logo">
@@ -21,96 +44,76 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="reels.html">Reels</a></li>
                 <li><a href="3d-work.html">3D Work</a></li>
-                <li><a href="tools.html">Tools</a></li>
                 <li><a href="films.html">Films</a></li>
-                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="resume_page.html">Resume</a></li>
+                <li><a href="about.html" class="active">About Me</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <section class="page-header">
-            <h1>About Me</h1>
+            <h1>Hi! I'm Sydney</h1>
         </section>
 
         <section class="content-section" style="max-width: 800px; margin: 0 auto;">
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; margin-bottom: 40px;">
                 <div>
-                    <div style="width: 100%; padding-bottom: 125%; background-color: #e0e0e0; border-radius: 8px; margin-bottom: 20px;"></div>
-                    <div style="text-align: center;">
-                        <a href="#" style="display: inline-block; padding: 12px 30px; margin: 5px; border: 2px solid #4CAF50; color: #4CAF50; text-decoration: none; border-radius: 4px; transition: all 0.3s;">RESUME</a>
-                        <a href="#" style="display: inline-block; padding: 12px 30px; margin: 5px; border: 2px solid #4CAF50; color: #4CAF50; text-decoration: none; border-radius: 4px; transition: all 0.3s;">LINKEDIN</a>
-                    </div>
+                    <img src="project_media/portraits/Headshot.jpg" alt="Sydney Gardner" style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 20px; display: block;">
                 </div>
                 <div>
-                    <h2 style="font-size: 28px; margin-bottom: 20px;">Hi! I'm [Your Name]</h2>
-                    <p style="font-size: 18px; line-height: 1.8; margin-bottom: 15px;">
-                        I'm a 3D artist and designer currently based in [Your Location]. I specialize in [your specialties], with a passion for creating compelling visual narratives through animation and visual effects.
+                    <p style="font-size: 14px; line-height: 1.8; margin-bottom: 15px;">
+                        I'm an FX Technical Director currently based in Provo, Utah and open to relocation. I'm currently a student at Brigham Young University, graduating in April 2026 with a Bachelor of Science in Computer Science, emphasizing in Animation.
+                        I worked as an FX Technical Director on BYU's 2025 student film "Love and Gold", and am currently working as the FX Lead and Technical Director on BYU's 2026 student film "Honey Business".                         Outside of my FX work, I enjoy Utah's beautiful outdoors, any sort of creative project, and spending time with my family.  
+
                     </p>
-                    <p style="font-size: 18px; line-height: 1.8; margin-bottom: 15px;">
-                        My work spans across character modeling, environment design, lighting, and visual effects. I've had the opportunity to work with [mention any notable clients or studios] and have contributed to projects such as [mention specific projects].
+                    <p style="font-size: 14px; line-height: 1.8; margin-bottom: 15px;">
+                        I specialize in creating captivating visual effects and production-ready tools and workflows using both technicality and creativity. 
+                        My background is in computer science and 3D animation, and I'm always looking for ways to combine my technical skills with my artistic eye. That's what drew me to the FX department in the first place! As an FX Technical Director,
+                        I've encountered so many problems that could only be solved through a combination of scripting, math, Houdini, trial and error, caffeine, and out of the box thinking. Nothing beats the satisfaction of completing a complex FX shot or 
+                        finishing a unique tool that makes my job more efficient.
                     </p>
-                    <p style="font-size: 18px; line-height: 1.8; margin-bottom: 15px;">
-                        I'm constantly learning and exploring new techniques in the ever-evolving field of 3D animation. When I'm not working on projects, I enjoy [your hobbies/interests].
+                    <p style="font-size: 14px; line-height: 1.8; margin-bottom: 15px;">
+                        Take a look around my website, and I hope you enjoy my work! If you're interested in working together or getting in touch with me, please contact me at sydneygardner711@gmail.com. Thanks!
                     </p>
+                    <div style="text-align: center; margin-top: 20px;">
+                        <a href="resume_page.html" class="about-btn">RESUME</a>
+                        <a href="https://www.linkedin.com/in/sydney-gardner1/" class="about-btn">LINKEDIN</a>
+                    </div>
                 </div>
             </div>
 
             <div class="content-section">
                 <h2>Skills & Software</h2>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 20px;">
-                    <div>
-                        <h3 style="font-size: 20px; margin-bottom: 10px;">3D Software</h3>
-                        <ul style="list-style: none; padding: 0; line-height: 1.8;">
-                            <li>Maya</li>
-                            <li>Houdini</li>
-                            <li>Blender</li>
-                            <li>Cinema 4D</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 style="font-size: 20px; margin-bottom: 10px;">Rendering</h3>
-                        <ul style="list-style: none; padding: 0; line-height: 1.8;">
-                            <li>Arnold</li>
-                            <li>Redshift</li>
-                            <li>Karma</li>
-                            <li>Renderman</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 style="font-size: 20px; margin-bottom: 10px;">Texturing</h3>
-                        <ul style="list-style: none; padding: 0; line-height: 1.8;">
-                            <li>Substance Painter</li>
-                            <li>Substance Designer</li>
-                            <li>Mari</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 style="font-size: 20px; margin-bottom: 10px;">Other</h3>
-                        <ul style="list-style: none; padding: 0; line-height: 1.8;">
-                            <li>Nuke</li>
-                            <li>After Effects</li>
-                            <li>Photoshop</li>
-                            <li>Illustrator</li>
-                        </ul>
-                    </div>
+                <ul style="margin: 20px 0; padding-left: 30px; line-height: 1.8; text-align: center;">
+                    <p style="font-size: 16px">SideFX Houdini</p>
+                    <p style="font-size: 16px">Autodesk Maya</p>
+                    <p style="font-size: 16px">Adobe Substance 3D Painter</p>
+                    <p style="font-size: 16px">Pixar RenderMan</p>
+                    <p style="font-size: 16px">Arnold</p>
+                    <p style="font-size: 16px">Houdini Karma</p>
+                    <p style="font-size: 16px">Python</p>
+                    <p style="font-size: 16px">C++</p>
+                    <p style="font-size: 16px">USD (Universal Scene Description)</p>
+                    
+                </ul>
                 </div>
             </div>
 
+            <div class="spacer" style="height: 30px;"></div>
+
             <div class="content-section">
                 <h2>Contact</h2>
-                <p style="font-size: 18px; line-height: 1.8;">
-                    <strong>Email:</strong> <a href="mailto:your.email@example.com" style="color: #333; text-decoration: underline;">your.email@example.com</a><br>
-                    <strong>Phone:</strong> (XXX) XXX-XXXX<br>
-                    <strong>Instagram:</strong> <a href="#" style="color: #333; text-decoration: underline;">@yourhandle</a><br>
-                    <strong>LinkedIn:</strong> <a href="#" style="color: #333; text-decoration: underline;">/yourprofile</a>
-                </p>
+                <p style="text-align: center">
+                    Email: <a href="mailto:sydneygardner711@gmail.com" style="color: #333; text-decoration: underline;">sydneygardner711@gmail.com</a></p>
+                <p style = "text-align: center;">LinkedIn: <a href="https://www.linkedin.com/in/sydney-gardner1/" style="color: #333; text-decoration: underline;">View My Profile</a></p>
+                
             </div>
         </section>
     </main>
 
     <footer>
-        <p>© 2024 Sydney Gardner. All rights reserved.</p>
+        <p>© 2025 Sydney Gardner. All rights reserved.</p>
     </footer>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
