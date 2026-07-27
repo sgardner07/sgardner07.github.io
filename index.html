@@ -4,18 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sydney Gardner - FX Technical Director</title>
-    
+
     <!-- Open Graph / LinkedIn Preview -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://sgardner07.github.io/">
+    <meta property="og:url" content="https://www.sydneygardner.com/">
     <meta property="og:title" content="Sydney Gardner - FX Technical Director">
     <meta property="og:description" content="Portfolio showcasing FX Technical Director work">
-    <meta property="og:image" content="https://sgardner07.github.io/project_media/love_and_gold/LNG_Frame.png">
-    
+    <meta property="og:image" content="https://www.sydneygardner.com/project_media/love_and_gold/LNG_Frame.png">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script src="site.js" defer></script>
 </head>
 <body>
     <div style="height: 30px;"></div>
@@ -24,187 +25,41 @@
             <div class="logo">
                 <a href="index.html">Sydney Gardner</a>
             </div>
-            <div class="hamburger" id="hamburger">
+            <div class="hamburger" id="hamburger" role="button" aria-label="Menu" tabindex="0">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="reels.html">Reels</a></li>
-                <li><a href="3d-work.html">3D Work</a></li>
-                <li><a href="films.html">Films</a></li>
-                <li><a href="resume_page.html">Resume</a></li>
-                <li><a href="about.html">About Me</a></li>
+                <li><a href="breakdowns.html">Breakdowns</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="section">
-            <div class="spacer" style="height: 30px;"></div>
-            <div class="content">
-                <h1 class="name">sydney gardner</h1>
+        <section class="hero">
+            <h1 class="name">sydney gardner</h1>
+            <h2>FX Technical Director</h2>
+        </section>
+
+        <section class="reveal">
+            <!-- REEL: swap the Vimeo ID below when the final reel is uploaded -->
+            <div class="vimeo-container">
+                <iframe src="https://player.vimeo.com/video/1130791805?autoplay=1&muted=1&loop=1&title=0&byline=0&portrait=0&dnt=1"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
+                        title="Sydney Gardner Reel"></iframe>
             </div>
-            <div class="content" style="margin-top:20px">
-                <div>
-                    <h2>FX Technical Director</h2>
-                </div>
+            <div class="hero-cta">
+                <a href="breakdowns.html" class="text-cta">Breakdowns</a>
             </div>
-            <div class="spacer" style="height: 30px;"></div>
-        </section>
-
-
-        <section class="section">
-            <div class="reel-content active" id="fx-reel">
-                <div class="youtube-container">
-                    <iframe src="https://www.youtube.com/embed/Uxh3cuC73TI?autoplay=1&mute=1&loop=1&playlist=Uxh3cuC73TI" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
-                </div>
-                <a href="reels.html" class="section-link">View All Reels →</a>
-            </div>
-        </section>
-
-        <section class="spacer"></section>
-
-        
-        <section class = "section">
-            <div class="content">
-                <h2>Featured Work</h2>
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="work-grid">
-                
-            
-                <a href="bobo_grass.html" class="work-item">
-                    <div class="work-item-image">
-                        <img src="project_media/bobo_procedural_grass/Bobo_Grass_Frame.png" alt="Grass Image" loading="lazy">
-                    </div>
-                    <div class="work-item-content">
-                        <h3>Procedural Grass Tool</h3>
-                        <p style="text-align: center;">A production-ready solution for simulating large fields of grass</p>
-                    </div>
-                </a>
-                <a href="love_and_gold.html" class="work-item">
-                    <div class="work-item-image">
-                        <img src="project_media/love_and_gold/LNG_Frame.png" alt="Love and Gold" loading="lazy">
-                    </div>
-                    <div class="work-item-content">
-                        <h3>"Love and Gold"</h3>
-                        <p>My FX work on Brigham Young University's 2025 student film, a College Television Award "Best Animated Film"!</p>
-                    </div>
-                </a>
-                <a href="rain-forest-fx.html" class="work-item">
-                    <div class="work-item-image">
-                        <img src="project_media/forest_rain/RainyForest_Frame.png" alt="Rainy Forest Image" loading="lazy">
-                    </div>
-                    <div class="work-item-content">
-                        <h3>Rainy Forest FX</h3>
-                        <p style="text-align: center;">A dark and stormy forest scene with some fun FX! </p>
-                    </div>
-                </a>
-                <a href="raytracer2.html" class="work-item">
-                    <div class="work-item-image">
-                        <img src="project_media/sugar_cookie/scene2.png" alt="Raytracer Image" loading="lazy">
-                    </div>
-                    <div class="work-item-content">
-                        <h3>C++ Raytracer</h3>
-                        <p style="text-align: center;">A C++ raytracer implementing Phong shading, reflections, and multiple light sources</p>
-                    </div>
-                </a>
-                <a href="project-sugar-cookie.html" class="work-item">
-                    <div class="work-item-image">
-                        <img src="project_media/sugar_cookie/Leister_Sydney_Checkin3_FinalBeautyShot.png" alt="Sugar Cookie Image" loading="lazy">
-                    </div>
-                    <div class="work-item-content">
-                        <h3>Sugar Cookie Product Video</h3>
-                        <p style="text-align: center;">A mock product video for a delicious sugar cookie.</p>
-
-                    </div>
-                </a>
-                <a href="shattering_mirror.html" class="work-item">
-                    <div class="work-item-image">
-                        <img src="project_media/shattering_mirror/Mirror_Shatter_Frame.png" alt="Mirror Image" loading="lazy">
-                    </div>
-                    <div class="work-item-content">
-                        <h3>Shattering Mirror</h3>
-                        <p style="text-align: center;">A practice in Rigid Body Dynamics and shattering FX</p>
-                    </div>
-                </a>
-                
-            </div>
-        </section>
-
-        <section class="spacer"></section>
-
-
-        <section class="work-preview tools-preview">
-            <a href="reels.html" class="work-section-link">
-                <div class="work-section-content">
-                    <h2>Reels</h2>
-                    <p>See my FX artist and CG generalist reels</p>
-                    <span class="view-more">View Reels →</span>
-                </div>
-            </a>
-        </section>
-
-        <section class="work-preview work-3d-preview">
-            <a href="3d-work.html" class="work-section-link">
-                <div class="work-section-content">
-                    <h2>3D Work</h2>
-                    <p>Tools, scripts, and modeling, shading, rigging, lighting, FX, and rendering projects</p>
-                    <span class="view-more">View 3D Work →</span>
-                </div>
-            </a>
-        </section>
-
-        <section class="work-preview films-preview">
-            <a href="films.html" class="work-section-link">
-                <div class="work-section-content">
-                    <h2>Films</h2>
-                    <p>See my FX work on various animated short films</p>
-                    <span class="view-more">View Films →</span>
-                </div>
-            </a>
-        </section>
-
-        <section class="work-preview about-preview">
-            <a href="about.html" class="work-section-link">
-                <div class="work-section-content">
-                    <h2>About Me</h2>
-                    <p>Learn more about my background and experience</p>
-                    <span class="view-more">Learn More →</span>
-                </div>
-            </a>
         </section>
     </main>
 
     <footer>
-        <p>© 2025 Sydney Gardner. All rights reserved.</p>
+        <p>© 2026 Sydney Gardner. All rights reserved.</p>
     </footer>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const hamburger = document.getElementById('hamburger');
-            const navLinks = document.getElementById('navLinks');
-            
-            if (hamburger && navLinks) {
-                hamburger.addEventListener('click', function() {
-                    hamburger.classList.toggle('active');
-                    navLinks.classList.toggle('active');
-                });
-                
-                // Close menu when clicking on a link
-                const links = navLinks.querySelectorAll('a');
-                links.forEach(link => {
-                    link.addEventListener('click', function() {
-                        hamburger.classList.remove('active');
-                        navLinks.classList.remove('active');
-                    });
-                });
-            }
-        });
-    </script>
 </body>
 </html>
-
