@@ -540,11 +540,13 @@ hr.accent-rule {
     aspect-ratio: 16 / 9;
     border: 1px dashed var(--primary);
     border-radius: var(--radius);
-    color: var(--text-muted);
-    font-size: 14px;
-    letter-spacing: 0.12em;
-    text-align: center;
-    text-transform: uppercase;
+    overflow: hidden;
+}
+
+.honey-video-placeholder iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
 }
 
 .honey-video-grid {
