@@ -31,12 +31,13 @@
     <main>
         <section class="page-header honey-header">
             <h1>"Honey Business"</h1>
-            <p>Here's a glimpse into my work as an FX Lead and FX TD on Brigham Young University's 2026 animated student film, "Honey Business"!</p>
+            <p>Here's a glimpse into my shot work and tool building as an FX Lead and FX TD on Brigham Young University's 2026 animated student film, "Honey Business"!</p>
             <nav class="honey-jump-nav" aria-label="Honey Business sections">
-                <a href="#section-one">Jump to Vellum Fluids</a>
-                <a href="#section-one">Jump to Car Crushing RBDs</a>
-                <a href="#section-two">Jump to Grass Groom & Sim Tool</a>
-                <a href="#section-three">Jump to Plant Keepalive Tool</a>
+                <a href="#section-one">Sticky Vellum Fluids</a>
+                <a href="#section-four">Grass Groom & Sim Tool</a>
+                <a href="#section-three">Car Crushing RBDs</a>
+                <a href="#section-two">Vellum Plant Interactions</a>
+                <a href="#section-five">Plant Keepalive Tool</a>
             </nav>
         </section>
 
@@ -55,39 +56,97 @@
         <section class="honey-section" id="section-one">
             <h2>Sticky Vellum Fluids</h2>
             <div class="honey-video-grid" aria-label="Section One video placeholders">
-                <div class="honey-video-placeholder"><iframe src="https://www.youtube.com/embed/cTgWrp3aHXM?si=cERQbkbyt_w55o1W" title="Sticky Vellum Fluids video 1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
-                <div class="honey-video-placeholder"><iframe src="https://www.youtube.com/embed/cTgWrp3aHXM?si=cERQbkbyt_w55o1W" title="Sticky Vellum Fluids video 2" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
-                <div class="honey-video-placeholder"><iframe src="https://www.youtube.com/embed/cTgWrp3aHXM?si=cERQbkbyt_w55o1W" title="Sticky Vellum Fluids video 3" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
-                <div class="honey-video-placeholder"><iframe src="https://www.youtube.com/embed/cTgWrp3aHXM?si=cERQbkbyt_w55o1W" title="Sticky Vellum Fluids video 4" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+                <div class="honey-video-placeholder"><iframe src="https://www.youtube.com/embed/6GlCZEie55M?si=DDzzINRjgICvBwbh" title="Sticky Vellum Fluids video 1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+                <div class="honey-video-placeholder"><iframe src="https://www.youtube.com/embed/xzV0YTNdBKU?si=F9twtNWTWKT5c0Nc" title="Sticky Vellum Fluids video 2" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+                <div class="honey-video-placeholder"><iframe src="https://www.youtube.com/embed/IUXjks7i3ss?si=hw8QuRmwKZkhrFrb" title="Sticky Vellum Fluids video 3" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
             </div>
-            <p>Placeholder description for this part of the project breakdown.</p>
+            <p>With the main character of the animated film being a big bear who loves (at times, gravity-defying) honey, I knew that the FX team had our work cut out for us. Following the director's vision for how the honey should
+                behave in each shot, I shaped the honey using viscosity attributes, glue constraints, and attach constraints inside of a Vellum Fluids Sim. For example, in a shot where the honey on the bear's hand needed to stick to a tree branch and stretch without breaking, I dynamically added attach and glue constraints to the vellum fluid
+            as it got close to a specific section of the branch. Animating the stretch values of the glue constraints allowed me to keep the stretching feeling of the honey strand without it breaking apart. In another shot, where a pair of garden shears cuts through a thick strand of honey, I started by modeling the initial shape of the honey strand. After converting that shape to a Vellum Fluid, I created attach constraints to anchor it in place and glue constraints between the grains
+        of the fluid. Then, based on the closeness of the garden shears to any given glue constraint, I dynamically removed constraints that would be cut by the shears' motion. This method gave me some visually interesting shapes in the honey strand, and I was able to go in and tweak the shapes and simulation even further by again manipulating the glue constraints.</p> 
         </section>
 
         <hr class="accent-rule honey-divider">
 
-        <section class="honey-section" id="section-two">
-            <h2>Section Two</h2>
-            <div class="honey-video-grid" aria-label="Section Two video placeholders">
-                <div class="honey-video-placeholder"><iframe src="https://www.youtube.com/embed/cTgWrp3aHXM?si=cERQbkbyt_w55o1W" title="Section Two video 1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
-                <div class="honey-video-placeholder"><iframe src="https://www.youtube.com/embed/cTgWrp3aHXM?si=cERQbkbyt_w55o1W" title="Section Two video 2" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
-                <div class="honey-video-placeholder"><iframe src="https://www.youtube.com/embed/cTgWrp3aHXM?si=cERQbkbyt_w55o1W" title="Section Two video 3" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
-                <div class="honey-video-placeholder"><iframe src="https://www.youtube.com/embed/cTgWrp3aHXM?si=cERQbkbyt_w55o1W" title="Section Two video 4" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+
+        <section class="honey-section" id="section-four">
+            <h2>Grass Groom & Sim Tool</h2>
+            <div class="honey-video-grid" aria-label="Section Four video placeholders">
+                <div class="honey-video-placeholder"><iframe src="https://www.youtube.com/embed/Y8u4ZXvjh84?si=tn9kXbekrwQon_HP" title="Section Four video 1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+                <div class="honey-video-placeholder"><iframe src="https://www.youtube.com/embed/eaOm1BQ4Tbg?si=D7Tu-yVAqnfHzayM" title="Section Four video 2" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+
             </div>
-            <p>Placeholder description for this part of the project breakdown.</p>
+            <p>Since our film takes place in a large garden with a lush lawn, I wanted to set up a tool that would allow all of the FX artists easily generate and simulate the grass while keeping the look consistent between shots. Additionally, I wanted
+                the tool to shade the grass and prepare it for publishing into our USD pipeline. First, the tool imports all groundplanes relevant to a shot into SOPS and creates custom maps for grass density, type, and height. These maps are based on art direction
+            and notes from the film's director. Then, the tool uses the shot camera to create a frustum that accounts for camera movement and uses it to cull out any irrelevant pieces of the groundplanes. This reduced the amount of grass that needed to be generated for a shot.
+            Then, using the grass density, height, and type maps, several layers of grass were created on the remaining groundplane geometry using the Houdini Grooming workflow. This included short manicured grass, long wild grass, and grass breaking up the silhouette of the perimeter of the lawn.
+            Now, with the grass field generated, artists could decide which USD objects they wanted to use as colliders in the grass simulation. To reduce the amount of grass that needed to be simulated, therefore saving time and disk space, only the grass within a small radius of the selected USD colliders way
+            simulated. These grass curves were simulated with Houdini Vellum Hair, which gave great control over stiffness and plasticity. After simulation, the tool created attributes necessary for the curves to render in RenderMan, which was our production's render engine. To save disk space, the curves
+            were rendered as ribbons. This meant, however, that it was easy for the grass ribbons to all end up looking uniform in the final render. To avoid this, the tool calculated the normals of each curve to face towards the shot camera, then randomized them per curve to achieve a little variation. Then, a randomized
+            "twist point" was selected on each curve, and from that point on in the curve, the normals were twisted to break up the flat, uniform look of the rendered curve. Finally, to prep the grass curves for publishing into a USD pipeline, the tool imported them into LOPS and assigned them a procedural shader. Any grass that was 
+            not simulated was set to publish as a single, static-frame USD file, and only the grass that was simulated was set to publish as a per-frame USD file.
+
+        </p>
         </section>
 
         <hr class="accent-rule honey-divider">
 
         <section class="honey-section" id="section-three">
-            <h2>Section Three</h2>
+            <h2>Car Crushing RBDs</h2>
             <div class="honey-video-grid" aria-label="Section Three video placeholders">
-                <div class="honey-video-placeholder"><iframe src="https://www.youtube.com/embed/cTgWrp3aHXM?si=cERQbkbyt_w55o1W" title="Section Three video 1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
-                <div class="honey-video-placeholder"><iframe src="https://www.youtube.com/embed/cTgWrp3aHXM?si=cERQbkbyt_w55o1W" title="Section Three video 2" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
-                <div class="honey-video-placeholder"><iframe src="https://www.youtube.com/embed/cTgWrp3aHXM?si=cERQbkbyt_w55o1W" title="Section Three video 3" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
-                <div class="honey-video-placeholder"><iframe src="https://www.youtube.com/embed/cTgWrp3aHXM?si=cERQbkbyt_w55o1W" title="Section Three video 4" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+                <div class="honey-video-placeholder"><iframe src="https://www.youtube.com/embed/u4ZXsxlLJ_k?si=hbyh-awrGFWvI1Jg" title="Section Three video 1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
             </div>
-            <p>Placeholder description for this part of the project breakdown.</p>
+            <p>One of the hero FX in the film was of a beautifully vintage truck getting smushed by a gigantic tree. I took on this shot not knowing how to approach it, but decided on a Houdini Rigid Body Dynamics workflow with custom constraint networks for each material in the car. By separating each material into its own constraint
+                network, I was able to have a lot of control over the shapes and breaking of each piece of the car. It allowed the metal of the car to behave differently than the wood pieces on the back of it, which was crucial to getting the FX to feel realistic. After simulating the main body of the car, I added layers of debris into the shot. Again, I used a 
+                Houdini RBD workflow to simulate the breaking glass windows. Additionally, I used Houdini POPS to add metal shrapnel, broken wood chunks, and detached tires sailing through the air. Once the combined simulations of the car and debris felt good, I added additional storytelling elements like honey bottles flying out of the back of the truck and a puff
+                of dust from underneath the car as it gets squished. 
+
+                I wanted to add additional motion to the falling tree as well. Using the animated broken tree trunk as a guide for the main motion, I simulated the tree branches colliding with the cliff wall by using a Houdini Vellum Hair workflow. I created spines to represent each of the branches, then simulated those spines as Vellum Hairs and used them to drive the deformation
+                of the branch geometry. Finally, I procedurally added leaves to the branches and deformed them to follow the branch motion. 
+            </p>
         </section>
+
+        <hr class="accent-rule honey-divider">
+
+        <section class="honey-section" id="section-two">
+            <h2>Vellum Plant Interactions</h2>
+            <div class="honey-video-grid" aria-label="Section Two video placeholders">
+                <div class="honey-video-placeholder"><iframe src="https://www.youtube.com/embed/4shoHdmyBDc?si=jaIEIiUDZaBhBseh" title="Section Two video 1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+                <div class="honey-video-placeholder"><iframe src="https://www.youtube.com/embed/VY_XpzqCalY?si=l25dfIhdvNteOXX_" title="Section Two video 2" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+                <div class="honey-video-placeholder"><iframe src="https://www.youtube.com/embed/PJw0UATOwnw?si=_JBKviYl7rdI4yzu" title="Section Two video 3" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+            </div>
+            <p>The story of "Honey Business" revolves around two things: honey and destruction. A main story point is that our big, honey-loving bear unknowingly destroys a beautifully curated garden. We had several shots that needed realistic interaction between the bear and the plants that he was destroying. For these shots,
+                I used a Vellum Hair workflow. First, I created either a spine or lattice that represented the plant asset to be interacted with. Then, using Vellum Hair constraints and dialing in the stiffness and plasticity parameters, I simulated the bear colliding with the Vellum Hairs. Finally, I used the simulated hairs to 
+                drive the deformation of the original plant asset. This workflow gave me a lot of control over the motion and stiffness of each different type of plant and resulted in great interaction!</p>
+        </section>
+
+        <hr class="accent-rule honey-divider">
+
+
+        <section class="honey-section" id="section-five">
+            <h2>Plant Keepalive Tool</h2>
+            <div class="honey-video-grid" aria-label="Section Five video placeholders">
+                <div class="honey-video-placeholder"><iframe src="https://www.youtube.com/embed/ZORVuKFMfes?si=RUharkB2VzYcVpzW" title="Section Five video 1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+                <div class="honey-video-placeholder"><iframe src="https://www.youtube.com/embed/SvWv05NDEcU?si=NkXVFytEDQ4eowQ8" title="Section Five video 2" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+
+            </div>
+            <p>With so many plants in our garden set, I wanted an easy way to make them feel alive without having to sim them in each individual shot. Thus, my plant keepalive tool! After bringing the tool into a shot, artists could select which plants they wanted to add keepalive motion to and the tool replaced the static asset with a pre-cached, animated instance of the same plant with matching transforms. 
+                Inside the tool, the selected plants were unpacked to make their centroid point accessible. Then, the instances' intrinsic packed transform matrix was saved to a point attribute for later use. Then, by parsing through each plant's USD path attribute, each plant's type was identified and assigned to the point as a name attribute. Using this name attribute, a pre-cached, Houdini Vellum simulated version of the same plant was copied to each point. The stored packed
+            transform matrix made sure that the animated plant matched the exact orientation of the static plant. Finally, the tool brought the animated plant instances into Houdini Solaris, where each asset's materials were reassigned and the originally selected static plants are removed, to avoid duplicates. These new animated plants were then ready to be published into their own USD layer, so no work from the environment team would be lost!</p>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         <section class="content-section honey-back-link">
             <a href="breakdowns.html" class="section-link">Back to Breakdowns</a>
