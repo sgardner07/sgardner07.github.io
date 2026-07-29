@@ -363,6 +363,15 @@ hr.accent-rule {
     padding: 40px 0 30px;
 }
 
+.home-role {
+    color: var(--accent);
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+}
+
 .hero-cta {
     text-align: center;
     margin-top: 30px;
@@ -504,6 +513,7 @@ hr.accent-rule {
 
 .honey-section {
     margin: 70px auto;
+    scroll-margin-top: 100px;
 }
 
 .honey-jump-nav {
@@ -511,7 +521,7 @@ hr.accent-rule {
     justify-content: center;
     flex-wrap: wrap;
     gap: 10px 22px;
-    margin: 22px auto 0;
+    margin: 36px auto 0;
 }
 
 .honey-jump-nav a {
@@ -550,11 +560,20 @@ hr.accent-rule {
 }
 
 .honey-video-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
     max-width: 800px;
     margin: 0 auto 20px;
+}
+
+.honey-video-grid .honey-video-placeholder {
+    flex: 0 1 calc(50% - 10px);
+}
+
+.honey-section > p + p {
+    margin-top: 20px;
 }
 
 .honey-divider {
@@ -573,7 +592,12 @@ hr.accent-rule {
     }
 
     .honey-video-grid {
+        display: grid;
         grid-template-columns: 1fr;
+    }
+
+    .honey-video-grid .honey-video-placeholder {
+        width: 100%;
     }
 }
 
@@ -669,16 +693,6 @@ hr.accent-rule {
     }
 }
 
-.resume-embed {
-    display: block;
-    width: 100%;
-    max-width: 800px;
-    height: 75vh;
-    margin: 30px auto 0;
-    border: 1px solid var(--primary);
-    border-radius: var(--radius);
-}
-
 /* Contact page */
 .contact-hero {
     text-align: center;
@@ -696,7 +710,7 @@ hr.accent-rule {
 
 .contact-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 40px;
     max-width: 980px;
     margin: 0 auto 90px;

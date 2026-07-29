@@ -41,17 +41,11 @@
             </nav>
         </section>
 
-        <section class="honey-reel" aria-label="Reel placeholder">
-        <section class="content-section">
-                    <div class="image-column">
-                        <div class="project-image-container">
-                            <div class="youtube-container">
-                                <iframe src="https://www.youtube.com/embed/cTgWrp3aHXM?si=cERQbkbyt_w55o1W" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-                            </div>
-                        </div>
-                    </div>
-                </section> 
-            </section>
+        <section class="honey-reel" aria-label="Honey Business reel">
+            <div class="youtube-container">
+                <iframe src="https://www.youtube.com/embed/cTgWrp3aHXM?si=cERQbkbyt_w55o1W" title="Honey Business reel" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </section>
 
         <section class="honey-section" id="section-one">
             <h2>Sticky Vellum Fluids</h2>
@@ -60,10 +54,9 @@
                 <div class="honey-video-placeholder"><iframe src="https://www.youtube.com/embed/xzV0YTNdBKU?si=F9twtNWTWKT5c0Nc" title="Sticky Vellum Fluids video 2" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
                 <div class="honey-video-placeholder"><iframe src="https://www.youtube.com/embed/IUXjks7i3ss?si=hw8QuRmwKZkhrFrb" title="Sticky Vellum Fluids video 3" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
             </div>
-            <p>With the main character of the animated film being a big bear who loves (at times, gravity-defying) honey, I knew that the FX team had our work cut out for us. Following the director's vision for how the honey should
-                behave in each shot, I shaped the honey using viscosity attributes, glue constraints, and attach constraints inside of a Vellum Fluids Sim. For example, in a shot where the honey on the bear's hand needed to stick to a tree branch and stretch without breaking, I dynamically added attach and glue constraints to the vellum fluid
-            as it got close to a specific section of the branch. Animating the stretch values of the glue constraints allowed me to keep the stretching feeling of the honey strand without it breaking apart. In another shot, where a pair of garden shears cuts through a thick strand of honey, I started by modeling the initial shape of the honey strand. After converting that shape to a Vellum Fluid, I created attach constraints to anchor it in place and glue constraints between the grains
-        of the fluid. Then, based on the closeness of the garden shears to any given glue constraint, I dynamically removed constraints that would be cut by the shears' motion. This method gave me some visually interesting shapes in the honey strand, and I was able to go in and tweak the shapes and simulation even further by again manipulating the glue constraints.</p> 
+            <p>With the main character of the animated film being a big bear who loves (at times, gravity-defying) honey, I knew that the FX team had our work cut out for us. Following the director's vision for how the honey should behave in each shot, I shaped the honey using viscosity attributes, glue constraints, and attach constraints inside a Vellum Fluids simulation.</p>
+            <p>For a shot where the honey on the bear's hand needed to stick to a tree branch and stretch without breaking, I dynamically added attach and glue constraints to the Vellum fluid as it got close to a specific section of the branch. Animating the stretch values of the glue constraints allowed me to keep the honey strand stretching without it breaking apart.</p>
+            <p>In another shot, a pair of garden shears cuts through a thick strand of honey. I started by modeling the initial shape of the honey strand. After converting that shape to a Vellum fluid, I created attach constraints to anchor it in place and glue constraints between the grains of the fluid. Then, based on the closeness of the garden shears to any given glue constraint, I dynamically removed constraints that would be cut by the shears' motion. This method gave me some visually interesting shapes in the honey strand, and I was able to tweak the shapes and simulation further by manipulating the glue constraints.</p>
         </section>
 
         <hr class="accent-rule honey-divider">
@@ -76,17 +69,12 @@
                 <div class="honey-video-placeholder"><iframe src="https://www.youtube.com/embed/eaOm1BQ4Tbg?si=D7Tu-yVAqnfHzayM" title="Section Four video 2" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
 
             </div>
-            <p>Since our film takes place in a large garden with a lush lawn, I wanted to set up a tool that would allow all of the FX artists easily generate and simulate the grass while keeping the look consistent between shots. Additionally, I wanted
-                the tool to shade the grass and prepare it for publishing into our USD pipeline. First, the tool imports all groundplanes relevant to a shot into SOPS and creates custom maps for grass density, type, and height. These maps are based on art direction
-            and notes from the film's director. Then, the tool uses the shot camera to create a frustum that accounts for camera movement and uses it to cull out any irrelevant pieces of the groundplanes. This reduced the amount of grass that needed to be generated for a shot.
-            Then, using the grass density, height, and type maps, several layers of grass were created on the remaining groundplane geometry using the Houdini Grooming workflow. This included short manicured grass, long wild grass, and grass breaking up the silhouette of the perimeter of the lawn.
-            Now, with the grass field generated, artists could decide which USD objects they wanted to use as colliders in the grass simulation. To reduce the amount of grass that needed to be simulated, therefore saving time and disk space, only the grass within a small radius of the selected USD colliders way
-            simulated. These grass curves were simulated with Houdini Vellum Hair, which gave great control over stiffness and plasticity. After simulation, the tool created attributes necessary for the curves to render in RenderMan, which was our production's render engine. To save disk space, the curves
-            were rendered as ribbons. This meant, however, that it was easy for the grass ribbons to all end up looking uniform in the final render. To avoid this, the tool calculated the normals of each curve to face towards the shot camera, then randomized them per curve to achieve a little variation. Then, a randomized
-            "twist point" was selected on each curve, and from that point on in the curve, the normals were twisted to break up the flat, uniform look of the rendered curve. Finally, to prep the grass curves for publishing into a USD pipeline, the tool imported them into LOPS and assigned them a procedural shader. Any grass that was 
-            not simulated was set to publish as a single, static-frame USD file, and only the grass that was simulated was set to publish as a per-frame USD file.
-
-        </p>
+            <p>Since our film takes place in a large garden with a lush lawn, I wanted to set up a tool that would allow all of the FX artists to generate and simulate the grass while keeping the look consistent between shots. I also wanted the tool to shade the grass and prepare it for publishing into our USD pipeline.</p>
+            <p>First, the tool imports all ground planes relevant to a shot into SOPs and creates custom maps for grass density, type, and height. These maps are based on art direction and notes from the film's director. Then, the tool uses the shot camera to create a frustum that accounts for camera movement and culls irrelevant pieces of the ground planes. This reduced the amount of grass that needed to be generated for a shot.</p>
+            <p>Using the grass density, height, and type maps, several layers of grass are created on the remaining ground-plane geometry with the Houdini Grooming workflow. This includes short manicured grass, long wild grass, and grass that breaks up the silhouette of the lawn perimeter.</p>
+            <p>Once the grass field is generated, artists can choose which USD objects to use as colliders in the grass simulation. To save time and disk space, only grass within a small radius of the selected USD colliders is simulated. These grass curves use Houdini Vellum Hair, which gives great control over stiffness and plasticity.</p>
+            <p>After simulation, the tool creates the attributes necessary for the curves to render in RenderMan, our production's render engine. To save disk space, the curves are rendered as ribbons. To avoid a uniform look, the tool calculates each curve's normals to face the shot camera, randomizes them per curve, and then twists the normals after a randomized point along each curve.</p>
+            <p>Finally, to prepare the grass curves for publishing into a USD pipeline, the tool imports them into LOPs and assigns a procedural shader. Unsimulated grass publishes as a single static-frame USD file, while simulated grass publishes as a per-frame USD file.</p>
         </section>
 
         <hr class="accent-rule honey-divider">
@@ -96,14 +84,10 @@
             <div class="honey-video-grid" aria-label="Section Three video placeholders">
                 <div class="honey-video-placeholder"><iframe src="https://www.youtube.com/embed/u4ZXsxlLJ_k?si=hbyh-awrGFWvI1Jg" title="Section Three video 1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
             </div>
-            <p>One of the hero FX in the film was of a beautifully vintage truck getting smushed by a gigantic tree. I took on this shot not knowing how to approach it, but decided on a Houdini Rigid Body Dynamics workflow with custom constraint networks for each material in the car. By separating each material into its own constraint
-                network, I was able to have a lot of control over the shapes and breaking of each piece of the car. It allowed the metal of the car to behave differently than the wood pieces on the back of it, which was crucial to getting the FX to feel realistic. After simulating the main body of the car, I added layers of debris into the shot. Again, I used a 
-                Houdini RBD workflow to simulate the breaking glass windows. Additionally, I used Houdini POPS to add metal shrapnel, broken wood chunks, and detached tires sailing through the air. Once the combined simulations of the car and debris felt good, I added additional storytelling elements like honey bottles flying out of the back of the truck and a puff
-                of dust from underneath the car as it gets squished. 
-
-                I wanted to add additional motion to the falling tree as well. Using the animated broken tree trunk as a guide for the main motion, I simulated the tree branches colliding with the cliff wall by using a Houdini Vellum Hair workflow. I created spines to represent each of the branches, then simulated those spines as Vellum Hairs and used them to drive the deformation
-                of the branch geometry. Finally, I procedurally added leaves to the branches and deformed them to follow the branch motion. 
-            </p>
+            <p>One of the hero FX in the film was a beautifully vintage truck getting smushed by a gigantic tree. I took on this shot not knowing how to approach it, but chose a Houdini Rigid Body Dynamics workflow with custom constraint networks for each material in the car.</p>
+            <p>By separating each material into its own constraint network, I had a lot of control over the shapes and breaking of every piece of the car. It allowed the metal to behave differently from the wood pieces on the back, which was crucial to making the FX feel realistic. After simulating the main body of the car, I added layers of debris, including breaking glass windows, metal shrapnel, broken wood chunks, and detached tires sailing through the air.</p>
+            <p>Once the combined car and debris simulations felt good, I added storytelling elements like honey bottles flying out of the back of the truck and a puff of dust from underneath the car as it gets squished.</p>
+            <p>I also wanted to add motion to the falling tree. Using the animated broken tree trunk as a guide for the main motion, I simulated tree branches colliding with the cliff wall through a Houdini Vellum Hair workflow. I created spines to represent each branch, simulated those spines as Vellum Hairs, and used them to drive the deformation of the branch geometry. Finally, I procedurally added leaves to the branches and deformed them to follow the branch motion.</p>
         </section>
 
         <hr class="accent-rule honey-divider">
@@ -115,9 +99,8 @@
                 <div class="honey-video-placeholder"><iframe src="https://www.youtube.com/embed/VY_XpzqCalY?si=l25dfIhdvNteOXX_" title="Section Two video 2" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
                 <div class="honey-video-placeholder"><iframe src="https://www.youtube.com/embed/PJw0UATOwnw?si=_JBKviYl7rdI4yzu" title="Section Two video 3" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
             </div>
-            <p>The story of "Honey Business" revolves around two things: honey and destruction. A main story point is that our big, honey-loving bear unknowingly destroys a beautifully curated garden. We had several shots that needed realistic interaction between the bear and the plants that he was destroying. For these shots,
-                I used a Vellum Hair workflow. First, I created either a spine or lattice that represented the plant asset to be interacted with. Then, using Vellum Hair constraints and dialing in the stiffness and plasticity parameters, I simulated the bear colliding with the Vellum Hairs. Finally, I used the simulated hairs to 
-                drive the deformation of the original plant asset. This workflow gave me a lot of control over the motion and stiffness of each different type of plant and resulted in great interaction!</p>
+            <p>The story of "Honey Business" revolves around two things: honey and destruction. A main story point is that our big, honey-loving bear unknowingly destroys a beautifully curated garden. We had several shots that needed realistic interaction between the bear and the plants he was destroying.</p>
+            <p>For these shots, I used a Vellum Hair workflow. First, I created either a spine or lattice that represented the plant asset to be interacted with. Then, using Vellum Hair constraints and dialing in the stiffness and plasticity parameters, I simulated the bear colliding with the Vellum Hairs. Finally, I used the simulated hairs to drive the deformation of the original plant asset. This workflow gave me a lot of control over the motion and stiffness of each type of plant and resulted in great interaction.</p>
         </section>
 
         <hr class="accent-rule honey-divider">
@@ -130,23 +113,10 @@
                 <div class="honey-video-placeholder"><iframe src="https://www.youtube.com/embed/SvWv05NDEcU?si=NkXVFytEDQ4eowQ8" title="Section Five video 2" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
 
             </div>
-            <p>With so many plants in our garden set, I wanted an easy way to make them feel alive without having to sim them in each individual shot. Thus, my plant keepalive tool! After bringing the tool into a shot, artists could select which plants they wanted to add keepalive motion to and the tool replaced the static asset with a pre-cached, animated instance of the same plant with matching transforms. 
-                Inside the tool, the selected plants were unpacked to make their centroid point accessible. Then, the instances' intrinsic packed transform matrix was saved to a point attribute for later use. Then, by parsing through each plant's USD path attribute, each plant's type was identified and assigned to the point as a name attribute. Using this name attribute, a pre-cached, Houdini Vellum simulated version of the same plant was copied to each point. The stored packed
-            transform matrix made sure that the animated plant matched the exact orientation of the static plant. Finally, the tool brought the animated plant instances into Houdini Solaris, where each asset's materials were reassigned and the originally selected static plants are removed, to avoid duplicates. These new animated plants were then ready to be published into their own USD layer, so no work from the environment team would be lost!</p>
+            <p>With so many plants in our garden set, I wanted an easy way to make them feel alive without having to simulate them in each individual shot. Thus, my plant keepalive tool: after bringing the tool into a shot, artists could select which plants needed keepalive motion, and the tool replaced the static asset with a pre-cached animated instance of the same plant with matching transforms.</p>
+            <p>Inside the tool, the selected plants were unpacked to make their centroid point accessible. Then, the instances' intrinsic packed transform matrix was saved to a point attribute for later use. By parsing each plant's USD path attribute, the tool identified the plant type and assigned it to the point as a name attribute. Using this name attribute, a pre-cached Houdini Vellum-simulated version of the same plant was copied to each point.</p>
+            <p>The stored packed transform matrix made sure that the animated plant matched the exact orientation of the static plant. Finally, the tool brought the animated plant instances into Houdini Solaris, reassigned each asset's materials, and removed the originally selected static plants to avoid duplicates. These new animated plants were then ready to publish in their own USD layer, so no work from the environment team would be lost.</p>
         </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         <section class="content-section honey-back-link">
             <a href="breakdowns.html" class="section-link">Back to Breakdowns</a>
