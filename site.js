@@ -18,6 +18,33 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+    // YouTube occasionally leaves muted autoplay embeds paused, which exposes
+    // its large title and playback overlay. Enable the iframe API and start
+    // those embeds once their player is ready.
+    document.querySelectorAll('iframe[src*="youtube.com/embed/"][src*="autoplay=1"]').forEach((iframe) => {
+        const url = new URL(iframe.src);
+        url.searchParams.set('enablejsapi', '1');
+        url.searchParams.set('origin', window.location.origin);
+        url.searchParams.set('playsinline', '1');
+
+        iframe.addEventListener('load', () => {
+            const startPlayback = () => {
+                iframe.contentWindow.postMessage(
+                    JSON.stringify({ event: 'command', func: 'mute', args: [] }),
+                    'https://www.youtube.com'
+                );
+                iframe.contentWindow.postMessage(
+                    JSON.stringify({ event: 'command', func: 'playVideo', args: [] }),
+                    'https://www.youtube.com'
+                );
+            };
+
+            [0, 250, 1000].forEach((delay) => window.setTimeout(startPlayback, delay));
+        }, { once: true });
+
+        iframe.src = url.toString();
+    });
+
     // Scroll reveal
     if (!reduceMotion && 'IntersectionObserver' in window) {
         const io = new IntersectionObserver((entries) => {
