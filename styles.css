@@ -491,6 +491,13 @@ hr.accent-rule {
     line-height: 1.6;
 }
 
+/* Breakdown detail lists */
+.content-section > p + ul,
+.content-section > p + ol {
+    margin-top: 20px;
+    padding-left: 30px;
+}
+
 /* Honey Business breakdown */
 .honey-header p,
 .honey-section > p {
